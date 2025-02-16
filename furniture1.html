@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart (0)</a></li> <!-- Cart placeholder -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <h1>Welcome to Our Store</h1>
+
+        <!-- Product Filters (Categories) -->
+        <aside class="filters">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">All</a></li>
+                <li><a href="#">Electronics</a></li>
+                <li><a href="#">Clothing</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </aside>
+
+        <!-- Product Grid -->
+        <section class="product-grid">
+            <!-- BEST WOODENDFUNITUER -->
+            <div class="product-item">
+                <img src="https://images.woodenstreet.de/image/data/Blog%20images/7thapril/2.jpg" alt="Product 1">
+                <h4>BEST WOODENDFUNITUER</h4>
+                <p>$19.99</p>
+                <p>a company that started its operations in 2015, is today India’s leading online furniture brand. With a strong physical presence of 100+ experience stores across India, WoodenStreet has rooted deep in Indian Homes. The company's booming growth grounds on its quality and design variety. This furniture brand offers all under one roof, from home furniture to decor to interior design services. WoodenStreet understands the changing furniture needs and gives intense competition to all luxury furniture brands in India.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!--ELECTRONICS-->
+            <div class="product-item">
+                <img src="data:image/jpeg;base64,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" alt="Product 2">
+                <h4>Electronics</h4>
+                <p>$29.99</p>
+                <p>Electricity usage monitors are easy to use and can measure the electricity usage of any device that runs on 120 volts. (But it can’t be used with large appliances that use 220 volts, such as electric clothes dryers, central air conditioners, or water heaters.) You can buy electricity usage monitors at most hardware stores for around $25-$50. Before using a monitor, read the user manual.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- DMR BRAND CLOTHES-->
+            <div class="product-item">
+                <img src="data:image/jpeg;base64,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" alt="Product 3">
+                <h4>DMR CLOTHS FOR MEN & WOMEN</h4>
+                <p>$15.99</p>
+                <p>MEN:This elegant three-piece suit is excellent for any formal occasion. Do you want to feel like George Clooney on the red carpet? Our slim fit and single-breasted blazer will give you a sharp and polished look while the pants and vest complete the ensemble. The 80% polyester and 20% viscose fabric is comfortable and easy to care for, and we recommend dry cleaning for the best results.
+                    WOMEN:Do you need a beautiful and unique dress for your next special occasion? Look no further than this chiffon bridesmaid dress! This gorgeous dress features a scoop neckline, lace chiffon fabric, and a hi-lo hemline that is sure to turn heads. The 94% nylon and 6% spandex fabric are comfortable and figure-flattering, and the hand wash-only care instructions make it easy to keep this dress looking its best. The zipper closure type ensures a perfect fit, and the imported origin means you can be confident in the quality of this dress. Whether you’re attending a wedding, a party, or a formal event, this floral lace chiffon dress is a perfect choice.
+                </p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!--ACCESSORIES-->
+            <div class="product-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsYoAEr6Jab5aKg3Ee5ux_6s4WK02jhTaung&s" alt="Product 4">
+                <h4>ACCESSORIES FOR MEN & WOMEN</h4>
+                <p>$25.99</p>
+                <p>Do you need a beautiful and unique dress for your next special occasion? Look no further than this chiffon bridesmaid dress! This gorgeous dress features a scoop neckline, lace chiffon fabric, and a hi-lo hemline that is sure to turn heads. The 94% nylon and 6% spandex fabric are comfortable and figure-flattering, and the hand wash-only care instructions make it easy to keep this dress looking its best. The zipper closure type ensures a perfect fit, and the imported origin means you can be confident in the quality of this dress. Whether you’re attending a wedding, a party, or a formal event, this floral lace chiffon dress is a perfect choice.</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Simple Online Store</p>
+    </footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Simple Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart (0)</a></li> <!-- Cart placeholder -->
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main Content Section -->
+    <main>
+        <h1>Checkout</h1>
+
+        <form action="process_checkout.php" method="post">
+            <fieldset>
+                <legend>Billing Information for DMR</legend>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Shipping Address</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment_method" required>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="paypal">PayPalS</option>
+                </select>
+
+                <button type="submit">Proceed to Payment</button>
+            </fieldset>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Simple Online Store</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Promotion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/countdown@2.6.0/countdown.min.js"></script> <!-- Countdown Timer Library -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#event-details">Event Details</a></li>
+                <li><a href="#register">Registration</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section: Event Promotion -->
+    <main>
+        <section id="hero">
+            <h1>DMR</h1>
+            <h1>Welcome to our new grand opening Event!</h1>
+            <p>Join us for an unforgettable experience.</p>
+        </section>
+
+        <!-- Event Details -->
+        <section id="event-details">
+            <h2>Event Details</h2>
+            <p><strong>Date:</strong> March 25, 2025</p>
+            <p><strong>Time:</strong> 10:00 AM</p>
+            <p><strong>Location:</strong> Convention Center, City Name</p>
+        </section>
+
+        <!-- Countdown Timer -->
+        <section id="countdown">
+            <h2>Countdown to the Event</h2>
+            <div id="timer"></div>
+        </section>
+
+        <!-- Registration Form -->
+        <section id="register">
+            <h2>Register Now</h2>
+            <form action="submit_registration.php" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Speakers/Guests Section -->
+        <section id="speakers">
+            <h2>Meet Our Speakers</h2>
+
+            <div class="speaker-profile">
+                <img src="c:\Users\devir\OneDrive\Pictures\mahi.jpg" alt="Speaker 1">
+                <h3>MAHIDHAR REDDY</h3>
+                <p>mahi is an expert in technology and innovation, with over 15 years of experience.</p>
+            </div>
+
+            <div class="speaker-profile">
+                <img src="https://www.youtube.com/watch?v=RP1BsrSChKo" alt="Speaker 2">
+                <h3>ishu</h3>
+                <p>ishu is a renowned speaker on leadership and business growth.</p>
+            </div>
+            <div class="speaker-profile">
+                <img scr="https://images.app.goo.gl/GEmL2SEbSCNBtJwt8" att="speaker 2">
+                <h3>simhadri</h3>
+                <p>simha is the maneger of projects shifting</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Event Name | All Rights Reserved</p>
+    </footer>
+
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        // Set the date we're counting down to
+        const eventDate = new Date("March 25, 2025 10:00:00").getTime();
+
+        // Update the countdown every second
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            // Display the result
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // If the countdown is finished
+            if (timeLeft < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("timer").innerHTML = "Event Started!";
+            }
+        }, 1000);
+    </script>
+
+</body>
+</html>
